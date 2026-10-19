@@ -34,6 +34,14 @@ hutch run dev       # 构建前端并启动桌面应用
 hutch run dev:hmr   # 带 Vite HMR 的开发模式
 ```
 
+也可以使用启动脚本（自动补齐 `~/.hutch/bin` 到 PATH、首次运行自动安装依赖）：
+
+```bash
+./start.sh          # dev
+./start.sh hmr      # HMR
+./start.sh build    # 打包
+```
+
 ## 打包
 
 ```bash
