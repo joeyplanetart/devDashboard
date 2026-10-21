@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+	<defs>
+		<linearGradient id="bg" x1="212" y1="120" x2="812" y2="900" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#232427" />
+			<stop offset="0.55" stop-color="#141517" />
+			<stop offset="1" stop-color="#0A0A0B" />
+		</linearGradient>
+		<radialGradient id="gloss" cx="512" cy="180" r="520" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10" />
+			<stop offset="0.6" stop-color="#FFFFFF" stop-opacity="0.02" />
+			<stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+		</radialGradient>
+		<linearGradient id="edge" x1="512" y1="96" x2="512" y2="920" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#FFFFFF" stop-opacity="0.22" />
+			<stop offset="0.35" stop-color="#FFFFFF" stop-opacity="0.06" />
+			<stop offset="1" stop-color="#FFFFFF" stop-opacity="0.03" />
+		</linearGradient>
+		<linearGradient id="mark" x1="354" y1="330" x2="688" y2="700" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#FFFFFF" />
+			<stop offset="1" stop-color="#D8D9DD" />
+		</linearGradient>
+		<linearGradient id="accent" x1="542" y1="586" x2="712" y2="674" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#45E68A" />
+			<stop offset="1" stop-color="#1FC96A" />
+		</linearGradient>
+		<filter id="shadow" x="40" y="40" width="944" height="1000" filterUnits="userSpaceOnUse">
+			<feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.45" />
+		</filter>
+		<filter id="accentGlow" x="478" y="530" width="300" height="220" filterUnits="userSpaceOnUse">
+			<feGaussianBlur stdDeviation="26" />
+		</filter>
+	</defs>
+
+	<!-- 底板：macOS 图标网格（824×824，圆角 186） -->
+	<g filter="url(#shadow)">
+		<rect x="100" y="96" width="824" height="824" rx="186" fill="url(#bg)" />
+		<rect x="100" y="96" width="824" height="824" rx="186" fill="url(#gloss)" />
+		<rect x="102.5" y="98.5" width="819" height="819" rx="183.5" fill="none" stroke="url(#edge)" stroke-width="3" />
+	</g>
+
+	<!-- 绿色光标 = 运行中的服务 -->
+	<rect x="542" y="586" width="170" height="88" rx="28" fill="#1FC96A" opacity="0.45" filter="url(#accentGlow)" />
+	<rect x="542" y="586" width="170" height="88" rx="28" fill="url(#accent)" />
+
+	<!-- 终端提示符 -->
+	<path d="M354 364 L490 512 L354 660" fill="none" stroke="url(#mark)" stroke-width="82" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

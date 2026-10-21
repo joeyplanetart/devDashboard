@@ -51,6 +51,18 @@ hutch run build:canary  # 预览版
 
 产物位于 `build/` 与 `artifacts/`。
 
+## 应用图标
+
+图标源文件是 `assets/icon.svg`：近黑圆角底板 + 白色终端提示符 + 绿色光标（表示运行中的服务）。
+
+修改 SVG 后重新生成各尺寸资源：
+
+```bash
+./scripts/build-icon.sh
+```
+
+会输出 `icon.iconset/`（macOS，10 个尺寸）和 `assets/icon.png`（Windows / Linux，1024px），并用 `iconutil` 校验。
+
 ## 项目结构
 
 ```
